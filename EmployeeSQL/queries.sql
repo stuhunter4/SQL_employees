@@ -1,4 +1,5 @@
--- list the following details of each employee: employee number, last name, first name, sex, and salary.
+-- list the following details of each employee:
+-- employee number, last name, first name, sex, and salary.
 SELECT e.emp_no, e.last_name, e.first_name, e.sex, s.salary
 FROM employees e
 JOIN salaries s
@@ -29,3 +30,45 @@ JOIN dept_emp p
 ON e.emp_no = p.emp_no
 JOIN departments d
 ON d.dept_no = p.dept_no;
+
+-- list first name, last name, and sex for employees whose first name is
+-- "Hercules" and last names begin with "B."
+SELECT first_name, last_name, sex
+FROM employees
+WHERE first_name = 'Hercules'
+AND last_name
+LIKE 'B%';
+
+-- list all employees in the Sales department, including their:
+-- employee number, last name, first name, and department name.
+
+SELECT p.emp_no, e.last_name, e.first_name, d.dept_name
+FROM employees e
+JOIN dept_emp p
+ON e.emp_no = p.emp_no
+JOIN departments d
+ON d.dept_no = p.dept_no
+WHERE dept_name = 'Sales';
+
+-- list all employees in the Sales and Development departments,
+-- including their employee number, last name, first name, and department name.
+SELECT p.emp_no, e.last_name, e.first_name, d.dept_name
+FROM employees e
+JOIN dept_emp p
+ON e.emp_no = p.emp_no
+JOIN departments d
+ON d.dept_no = p.dept_no
+WHERE dept_name = 'Sales'
+OR dept_name = 'Development';
+
+-- in descending order, list the frequency count of employee last names,
+-- i.e., how many employees share each last name.
+SELECT last_name, COUNT(last_name)
+FROM employees
+GROUP BY last_name
+ORDER BY "count" DESC;
+
+-- epilogue: pulling info on employee ID number 499942
+SELECT *
+FROM employees
+WHERE emp_no = 499942;
