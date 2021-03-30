@@ -24,6 +24,6 @@ QuickDBD_SQL-challenge.png: Image file of the entity relationship diagram create
 
 ![range](EmployeeSQL/salary_range.JPG)
 
-![average](EmployeeSQL/avg_salary.JPG)
+**Bonus_Analysis.ipynb:** Additional analysis utilizing SQLAlchemy to import the SQL database into Pandas.  Includes queries for the histogram above visualizing the most common salary ranges for employees, and for the bar chart below of average salary by title, to qualify the spurious nature of the dataset.
 
-**Bonus_Analysis.ipynb:** Additional analysis utilizing SQLAlchemy to import the SQL database into Pandas.  Includes queries for the histogram visualizing the most common salary ranges for employees, and the bar chart of average salary by title, to qualify the spurious nature of the dataset.
+![average](EmployeeSQL/avg_salary.JPG)
