@@ -16,14 +16,14 @@ QuickDBD_SQL-challenge.png: Image file of the entity relationship diagram create
 
 **table_schemata.sql:** CSV files imported into corresponding SQL table in pgAdmin.
 
-![queries](EmployeeSQL/queries_demo.jpg)
+![queries](EmployeeSQL/queries_demo.JPG)
 
 **queries.sql:** Data analysis performing SQL queries for a variety of cross-table information, for example: first name, last name, and hire date for employees who were hired in 1986; all employees in the Sales and Development departments (displayed above), including their employee number, last name, first name, and department name, etc.
 
 - - -
 
-![range](EmployeeSQL/salary_range.jpg)
+![range](EmployeeSQL/salary_range.JPG)
 
-![average](EmployeeSQL/avg_salary.jpg)
+![average](EmployeeSQL/avg_salary.JPG)
 
 **Bonus_Analysis.ipynb:** Additional analysis utilizing SQLAlchemy to import the SQL database into Pandas.  Includes queries for the histogram visualizing the most common salary ranges for employees, and the bar chart of average salary by title, to qualify the spurious nature of the dataset.
